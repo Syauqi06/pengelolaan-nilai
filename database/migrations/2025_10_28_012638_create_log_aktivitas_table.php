@@ -20,10 +20,10 @@ return new class extends Migration
                   ->onDelete('restrict');
 
             $table->string('jenis_aktivitas', 50);
-            $table->json('data_lama')->nullable();
-            $table->json('data_baru')->nullable();
             $table->ipAddress('ip_address')->nullable();
             $table->text('user_agent')->nullable();
+            $table->json('data_lama')->nullable();
+            $table->json('data_baru')->nullable();
             $table->timestamp('waktu_aktivitas')->useCurrent();
             
             // Indexes untuk optimasi pencarian
